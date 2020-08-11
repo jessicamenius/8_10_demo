@@ -1,9 +1,11 @@
 import React from "react";
 
-const TranslationList = () => {
+const TranslationList = (props) => {
   return (
     <div>
-      <h1>Hello from list</h1>
+      {props.translationList.map((element) => (
+        <h1>{element}</h1>
+      ))}
     </div>
   );
 };

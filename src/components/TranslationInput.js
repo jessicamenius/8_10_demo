@@ -1,13 +1,15 @@
 import React from "react";
 
-const TranslationInput = () => {
+const TranslationInput = (props) => {
   return (
-    <form>
+    <form onSubmit={props.submitText}>
       <div className="input-group mb-3">
         <input
+          name="text"
           type="text"
           className="form-control"
-          placeholder="Recipient's username"
+          placeholder="Enter text"
+          onChange={props.editText}
         />
         <div className="input-group-append">
           <button
@@ -15,7 +17,7 @@ const TranslationInput = () => {
             type="button"
             id="button-addon2"
           >
-            Button
+            Submit
           </button>
         </div>
       </div>
